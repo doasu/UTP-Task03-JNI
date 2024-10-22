@@ -8,25 +8,29 @@ import java.util.stream.IntStream;
 import static org.junit.jupiter.api.Assertions.*;
 
 
-public class ChunkTest
+public
+class ChunkTest
 {
 
 @Test
-public void stringsThatCanBeSplitPerfectlyAreCorrectlySplit()
+public
+void stringsThatCanBeSplitPerfectlyAreCorrectlySplit()
 {
         assertArrayEquals(new String[]{"Easi", "ly s", "plit"}, Main.chunk("Easily split", 3));
         assertArrayEquals(new String[]{"Hello", "There"}, Main.chunk("HelloThere", 2));
 }
 
 @Test
-public void splittingIntoOneStringReturnsTheOriginalString()
+public
+void splittingIntoOneStringReturnsTheOriginalString()
 {
         assertArrayEquals(new String[]{"Whole text"}, Main.chunk("Whole text", 1));
         assertArrayEquals(new String[]{""}, Main.chunk("", 1));
 }
 
 @Test
-public void splittingEmptyStringIntoFewChunksShouldReturnThatManyEmptyStrings()
+public
+void splittingEmptyStringIntoFewChunksShouldReturnThatManyEmptyStrings()
 {
         assertArrayEquals(new String[]{""}, Main.chunk("", 1));
 
@@ -36,7 +40,8 @@ public void splittingEmptyStringIntoFewChunksShouldReturnThatManyEmptyStrings()
 }
 
 @Test
-public void splittingStringIntoZeroElementsShouldReturnZeroLengthArray()
+public
+void splittingStringIntoZeroElementsShouldReturnZeroLengthArray()
 {
         assertEquals(0, Main.chunk("some random text", 0).length);
 
@@ -44,7 +49,8 @@ public void splittingStringIntoZeroElementsShouldReturnZeroLengthArray()
 }
 
 @Test
-public void splittingStringIntoNegativeNumberOfChunksThrowsIllegalArgumentException()
+public
+void splittingStringIntoNegativeNumberOfChunksThrowsIllegalArgumentException()
 {
         Exception exception;
 
@@ -62,7 +68,8 @@ public void splittingStringIntoNegativeNumberOfChunksThrowsIllegalArgumentExcept
 }
 
 @Test
-public void stringsSplitUnevenlyHaveLastElementPaddedWithSpaces()
+public
+void stringsSplitUnevenlyHaveLastElementPaddedWithSpaces()
 {
         assertArrayEquals(new String[]{"Hel", ( "lo" + " " )}, Main.chunk("Hello", 2));
 
@@ -70,7 +77,8 @@ public void stringsSplitUnevenlyHaveLastElementPaddedWithSpaces()
 }
 
 @Test
-public void splittingStringIntoMoreChunksThanItHasLettersProducesEmptyStringsAtTheEndOfTheArray()
+public
+void splittingStringIntoMoreChunksThanItHasLettersProducesEmptyStringsAtTheEndOfTheArray()
 {
         assertArrayEquals(new String[]{"h", "e", "l", "l", "o", "", ""}, Main.chunk("hello", 7));
 

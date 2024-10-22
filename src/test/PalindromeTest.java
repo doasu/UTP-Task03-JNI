@@ -5,24 +5,28 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class PalindromeTest
+public
+class PalindromeTest
 {
 
 @Test
-public void arbitraryPalindromesAreReportedAsSuch()
+public
+void arbitraryPalindromesAreReportedAsSuch()
 {
         assertTrue(Main.isPalindrome("racecar"));
         assertTrue(Main.isPalindrome("madam"));
 }
 
 @Test
-public void emptyStringIsAPalindrome()
+public
+void emptyStringIsAPalindrome()
 {
         assertTrue(Main.isPalindrome(""));
 }
 
 @Test
-public void nullIsNotAPalindrome()
+public
+void nullIsNotAPalindrome()
 {
         assertFalse(Main.isPalindrome(null));
 }

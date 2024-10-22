@@ -5,11 +5,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class WithoutDuplicatesTest
+public
+class WithoutDuplicatesTest
 {
 
 @Test
-public void ascendingArrayWithNoDuplicatesStaysTheSame()
+public
+void ascendingArrayWithNoDuplicatesStaysTheSame()
 {
         int[] array1 = {1, 2, 3, 4, 5};
         int[] array2 = {1, 2, 3};
@@ -19,7 +21,8 @@ public void ascendingArrayWithNoDuplicatesStaysTheSame()
 }
 
 @Test
-public void descendingArrayWithNoDuplicatesStaysTheSame()
+public
+void descendingArrayWithNoDuplicatesStaysTheSame()
 {
         int[] array1 = {5, 4, 3, 2, 1};
         int[] array2 = {3, 2, 1};
@@ -29,7 +32,8 @@ public void descendingArrayWithNoDuplicatesStaysTheSame()
 }
 
 @Test
-public void emptyArrayStaysTheSame()
+public
+void emptyArrayStaysTheSame()
 {
         int[] array = {};
 
@@ -37,18 +41,20 @@ public void emptyArrayStaysTheSame()
 }
 
 @Test
-public void randomArrayWithoutDuplicatesStaysTheSame()
+public
+void randomArrayWithoutDuplicatesStaysTheSame()
 {
         int[] randomValues = {27, 94, 12, 57, 86, 34, 65, 4, 73, 19};
 
         assertArrayEquals(
-                randomValues, Main.withoutDuplicates(randomValues),
-                "Removing duplicates should be a stable operation"
+        randomValues, Main.withoutDuplicates(randomValues),
+        "Removing duplicates should be a stable operation"
         );
 }
 
 @Test
-public void arraysWithJustOneRepeatingElementAreReducedToSingleElement()
+public
+void arraysWithJustOneRepeatingElementAreReducedToSingleElement()
 {
         int[] array1 = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
         int[] array2 = {2, 2, 2, 2};
